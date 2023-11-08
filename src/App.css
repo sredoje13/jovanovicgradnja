@@ -1,38 +1,691 @@
 .App {
   text-align: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+.menubutton {
+  display: none;
+}
+.navlinks {
+  color: rgb(163, 163, 163);
+  text-decoration: none;
+  font-size: x-large;
+}
+.navlinks:hover {
+  text-decoration: underline;
+  scale: 1.1;
+}
+.buttonnav {
+  color: rgb(163, 163, 163);
+  text-decoration: none;
+  font-size: x-large;
+  background-color: inherit;
+  border: 0px;
+}
+.buttonnav:hover {
+  text-decoration: underline;
+  scale: 1.1;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.activelinks {
+  text-decoration: underline;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flexc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flexs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flexstart {
+  display: flex;
+  justify-content: flex-start;
+}
+.flexcolumn {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.layout {
+  padding: 5px;
+  width: 100%;
+  background-color: rgb(70, 70, 70);
+  box-shadow: 0px 2px 10px 5px rgb(255, 255, 255);
+  position: fixed;
+  z-index: 10;
+  margin-top: 100px;
+}
+.logo {
+  width: 160px;
+  height: 160px;
+}
+.imgcontainer {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+}
+.firstpage {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.52),
+      rgba(9, 70, 32, 0.73)
+    ),
+    url("./components/utils/first2.jpg");
+
+  background-size: cover;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.firstdiv {
+  width: 30%;
+  background-color: rgb(64, 126, 64, 0.7);
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 0px 0px 15px 5px;
+}
+.firstcontainer {
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+.h1 {
+  color: #ffffff;
+  font-family: "Lilita One", sans-serif;
+}
+h3 {
+  font-family: "Lugrasimo", cursive;
+  color: rgb(45, 70, 47);
+}
+* {
+  font-family: "Playfair Display", serif;
+}
+
+.firstpageimagecontainer {
+  width: 80%;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+.divforpictures {
+  width: 100%;
+}
+.firstimage {
+  margin-top: 270px;
+  background-size: cover;
+  background-image: url("../src/components/utils/slike/krov2.jpg");
+  height: 700px;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  background-position-y: center;
+  background-position-x: center;
+
+  width: 100%;
+}
+.divforpictures h1 {
+  position: absolute;
+  top: 50%;
+  font-size: 100px;
+  color: green;
+}
+.firstpageimages {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+.firstpageimages img {
+  width: 310px;
+}
+.firstpageimages img:hover {
+  cursor: pointer;
+  transform: scale(2);
+  filter: brightness(50%);
+  transition-duration: 3s;
+}
+.imgslider {
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+  background-color: rgb(236, 232, 232);
+  position: absolute;
+}
+.imgslider img {
+  width: 600px;
+}
+.iconbutton {
+  position: absolute;
+  top: 10px;
+  background-color: grey;
+  border-radius: 100px;
+  padding: 10px;
+  border: 0px;
+  z-index: 5;
+}
+.iconbutton:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.contact2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: black;
   color: white;
+  margin-right: 100px;
+  position: fixed;
+}
+.contact2 a {
+  margin-right: 50px;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
 }
 
-.App-link {
-  color: #61dafb;
+.contact2 a:hover {
+  color: grey;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.line {
+  height: 20px;
+  width: 100vw;
+  background: repeating-linear-gradient(
+    -80deg,
+    #174e0c,
+    #cbd8a8 25px,
+    #ffffff 25px
+  );
+}
+.greenline {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.52),
+      rgba(9, 70, 32, 0.73)
+    ),
+    url("./components/utils/first2.jpg");
+  background-size: 100%;
+  margin-bottom: 30px;
+}
+.greenline div {
+  align-items: flex-start;
+}
+.blackbutton {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border: 0px;
+}
+.blackbutton:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.pgreenline {
+  color: rgb(206, 243, 204);
+  width: 100%;
+  text-align: start;
+}
+.icondivs {
+  margin: 20px;
+  padding: 20px;
+  width: 200px;
+  border: #b38f1b 1px solid;
+  border-radius: 10px;
+}
+.iconsofcontact {
+  font-size: 500%;
+  color: #b38f1b;
+}
+.icondivs a {
+  color: #b38f1b;
+}
+.icondivs a:hover {
+  color: grey;
+}
+.copy {
+  background-color: rgb(228, 228, 228);
+  color: #e2b72b;
+  width: 100vw;
+  font-family: "Courier New", Courier, monospace;
+  padding: 10px;
+  align-items: flex-start;
+}
+.serves {
+  padding-top: 380px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.52),
+      rgba(215, 236, 223, 0.73)
+    ),
+    url("./components/utils/first3.jpg");
+  width: 100vw;
+}
+.divserves {
+  width: 60%;
+}
+.margin {
+  padding-top: 300px;
+}
+.aboutus {
+  background-image: linear-gradient(
+    to top,
+    rgba(229, 233, 183, 0.52),
+    rgba(126, 211, 158, 0.73)
+  );
+}
+.aboutdiv {
+  width: 60%;
+  font-size: x-large;
+  color: grey;
+  padding-bottom: 50px;
+}
+.aboutus h1 {
+  margin-bottom: 50px;
+  font-size: 300%;
+}
+.aboutdiv p {
+  text-align: justify;
+  padding-bottom: 50px;
+}
+.aboutdiv h3 {
+  color: rgb(9, 77, 9);
+  font-size: 200%;
+}
+.year {
+  width: 250px;
+}
+.year:hover {
+  transform: scale(1.5);
+  transition: transform 5s;
+}
+.why {
+  width: 60%;
+  text-align: justify;
+  margin-bottom: 50px;
+}
+.whydiv {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 0px 15px 5px black;
+}
+@keyframes animation {
+  0% {
+    transform: scale(1.5);
   }
-  to {
-    transform: rotate(360deg);
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.animated {
+  animation: animation 2s ease-in;
+}
+.slider2 {
+  display: none;
+}
+@media only screen and (max-width: 1700px) {
+  .divserves {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1550px) {
+  .firstpageimagecontainer {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  h3 {
+    font-size: small;
+  }
+  .firstpageimages {
+    width: 200px;
+    height: 150px;
+  }
+  .firstpageimages img {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .divforpictures h1 {
+    font-size: 80px;
+  }
+  .dalibor {
+    width: 800px;
+  }
+  .firstdiv {
+    width: 40%;
+  }
+  .imgslider {
+    margin-top: -200px;
+    width: 500px;
+    height: 300px;
+  }
+  .imgslider img {
+    width: 400px;
+  }
+  .greenline {
+    font-size: small;
+  }
+  .icondivs {
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .divserves {
+    flex-direction: column;
+  }
+
+  .serves {
+    padding-top: 300px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .firstimage {
+    margin-top: 200px;
+    height: 650px;
+  }
+  .divforpictures h1 {
+    font-size: 50px;
+  }
+  .dalibor {
+    width: 500px;
+  }
+  .margin {
+    padding-top: 250px;
+  }
+  .icondivs {
+    font-size: small;
+    height: 150px;
+    width:100px
+  }
+  .greenline {
+    font-size: x-small;
+  }
+  .blackbutton {
+    padding: 10px;
+    margin-right: 20px;
+  }
+  .imgslider {
+    width: 400px;
+    height: 250px;
+  }
+  .imgslider img {
+    width: 300px;
+  }
+  .firstpageimages {
+    width: 200px;
+    height: 100px;
+  }
+  .firstpageimages img {
+    width: 210px;
+  }
+  .firstdiv {
+    width: 45%;
+    font-size: small;
+  }
+  .firstpage {
+    background-size: contain;
+  }
+  .navlinks,
+  .buttonnav {
+    font-size: medium;
+  }
+  .logo,
+  .imgcontainer {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .aboutdiv h3 {
+    font-size: 30px;
+  }
+  .aboutdiv p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .iconcontact {
+    flex-direction: column;
+    background-image: url("./components/utils/slike/krov.jpg");
+    background-attachment: fixed;
+  }
+
+  .icondivs a {
+    font-size: 18px;
+  }
+ 
+  .icondivs {
+    background-color: aliceblue;
+    font-size: 20px;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+  }
+  .firstpageimages {
+    width: 150px;
+    height: 100px;
+  }
+  .firstpageimages img {
+    width: 170px;
+  }
+  .imgslider {
+    margin-top: -100px;
+  }
+  .greenline {
+    flex-direction: column;
+    justify-content: center;
+    font-size: medium;
+    padding: 30px;
+  }
+  .pgreenline {
+    text-align: center;
+    margin-top: -10px;
+  }
+
+  .blackbutton {
+    padding: 10px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .aboutdiv {
+    width: 90%;
+    padding-bottom: 20px;
+  }
+  .year {
+    width: 170px;
+  }
+  .why {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .iconabsolute {
+    font-size: 80px;
+    color: rgb(23, 54, 23);
+    position: absolute;
+    top: 35%;
+  }
+  .firstimage {
+    margin-top: 0px;
+    height: 450px;
+  }
+  .divforpictures h1 {
+    font-size: 30px;
+    top: 20%;
+  }
+  .whydiv {
+    font-size: 12px;
+  }
+  .aboutdiv h3 {
+    font-size: 22px;
+  }
+
+  .dalibor {
+    width: 300px;
+  }
+  .serves {
+    padding-top: 20px;
+    width: 100%;
+  }
+  .iconcontact {
+    background-size: contain;
+  }
+  .margin {
+    padding-top: 30px;
+  }
+  .firstdiv {
+    width: 70%;
+    font-size: medium;
+  }
+  .contact2 {
+    display: none;
+  }
+  .layout {
+    margin-top: 0px;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 45px;
+    overflow: hidden;
+  }
+  .menubutton {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .firstpage {
+    background-size: contain;
+  }
+  .navlinks,
+  .buttonnav {
+    font-size: medium;
+  }
+  .logo,
+  .imgcontainer {
+    display: none;
+  }
+  .firstpageimagecontainer {
+    display: none;
+  }
+
+  .slider2 {
+    display: flex;
+  }
+  .slider2container img {
+    width: 300px;
+  }
+  .dot {
+    font-size: x-large;
+  }
+  .dot:hover {
+    color: white;
+    scale: 2;
+  }
+  .slider2container {
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0, 0.55);
+  }
+  .copy {
+    font-size: x-small;
+    justify-content: flex-start;
+    padding: 5px;
+  }
+  .aboutdiv p {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .whydiv {
+    font-size: 8px;
+  }
+  .year {
+    width: 120px;
+  }
+  .aboutdiv p {
+    font-size: 12px;
+  }
+  .copy {
+    font-size: 50%;
+  }
+  .slider2container img {
+    width: 200px;
+  }
+  .dot {
+    font-size: medium;
+  }
+  .dot:hover {
+    color: white;
+    scale: 1.5;
+  }
+  .slider2container {
+    width: 270px;
+    height: 150px;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0, 0.55);
+  }
+  .firstdiv {
+    font-size: small;
+    margin-top: 12px;
+  }
+  .h1 {
+    font-size: small;
+  }
+  h3 {
+    font-size: small;
+  }
+  .icondivs a {
+    font-size: 12px;
+  }
+  .iconsofcontact {
+    font-size: 200%;
+  }
+  .icondivs {
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .iconabsolute {
+    font-size: 50px;
+  }
+  .firstimage {
+    height: 350px;
+  }
+  .divforpictures h1 {
+    font-size: 20px;
+    top: 25%;
+  }
+  .dalibor {
+    width: 250px;
+  }
+
+  .copy {
+    font-size: 40%;
   }
 }
