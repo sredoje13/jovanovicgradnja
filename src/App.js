@@ -30,6 +30,7 @@ dispatch(actions.openmenu())  };
   console.log(viewpage);
   const scrolltocontact = () => {
     window.scrollTo({ top: contactop.offsetTop + 400 });
+    dispatch(actions.closemenu())
   };
 
   var onresize = function () {
