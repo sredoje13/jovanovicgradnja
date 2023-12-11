@@ -110,14 +110,13 @@
 }
 .h1 {
   color: #ffffff;
-  font-family: "Lilita One", sans-serif;
-}
+ }
 h3 {
-  font-family: "Lugrasimo", cursive;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
   color: rgb(45, 70, 47);
 }
 * {
-  font-family: "Playfair Display", serif;
+  font-family: 'Noto Sans Display', sans-serif;
 }
 
 .firstpageimagecontainer {
@@ -415,19 +414,47 @@ h3 {
   }
 }
 @media only screen and (max-width: 900px) {
-  .firstimage {
-    margin-top: 200px;
-    height: 650px;
+  .layout {
+    margin-top: 0px;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 45px;
+    overflow: hidden;
   }
+  .menubutton {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .navlinks,
+  .buttonnav {
+    font-size: medium;
+  }
+  .logo,
+  .imgcontainer {
+    display: none;
+  }
+  .firstimage {
+    margin-top: 0px;
+    height: 450px;
+  }
+  .margin {
+    padding-top: 30px;
+  }
+  .serves {
+    padding-top: 20px;
+    width: 100%;
+  }
+ 
   .divforpictures h1 {
     font-size: 50px;
+    top: 15rem;
+
   }
   .dalibor {
     width: 500px;
   }
-  .margin {
-    padding-top: 250px;
-  }
+ 
   .icondivs {
     font-size: small;
     height: 150px;
@@ -461,15 +488,11 @@ h3 {
   .firstpage {
     background-size: contain;
   }
-  .navlinks,
-  .buttonnav {
-    font-size: medium;
+  .contact2 {
+    display: none;
   }
-  .logo,
-  .imgcontainer {
-    width: 100px;
-    height: 100px;
-  }
+
+
 }
 @media only screen and (max-width: 700px) {
   .aboutdiv h3 {
@@ -532,40 +555,7 @@ h3 {
   .why {
     width: 90%;
   }
-  .contact2 {
-    display: none;
-  }
-  .layout {
-    margin-top: 0px;
-    position: relative;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 45px;
-    overflow: hidden;
-  }
-  .menubutton {
-    display: flex;
-    margin-bottom: 10px;
-  }
-  .navlinks,
-  .buttonnav {
-    font-size: medium;
-  }
-  .logo,
-  .imgcontainer {
-    display: none;
-  }
-  .firstimage {
-    margin-top: 0px;
-    height: 450px;
-  }
-  .margin {
-    padding-top: 30px;
-  }
-  .serves {
-    padding-top: 20px;
-    width: 100%;
-  }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -573,12 +563,11 @@ h3 {
     font-size: 80px;
     color: rgb(23, 54, 23);
     position: absolute;
-    top: 35%;
+    top: 20rem;
   }
 
   .divforpictures h1 {
     font-size: 30px;
-    top: 15rem;
   }
   .whydiv {
     font-size: 12px;
@@ -672,7 +661,7 @@ h3 {
     margin-top: 12px;
   }
   .h1 {
-    font-size: small;
+    font-size: large;
   }
   h3 {
     font-size: small;
@@ -692,6 +681,7 @@ h3 {
 @media only screen and (max-width: 350px) {
   .iconabsolute {
     font-size: 50px;
+    top:22rem
   }
   .firstimage {
     height: 350px;

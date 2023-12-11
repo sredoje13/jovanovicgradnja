@@ -22,7 +22,7 @@ export const firstdivs = [
     "JOVANOVIĆ GRADNJA K2 je stručna firma koja nudi širok spektar usluga vezanih za radove na visini, uključujući održavanje, popravaku i instalaciju raznih sistema i uređaja na zgradama i drugim visokim strukturama."
   ),
   new Datas(
-    "Građevinski radovi",
+    "Gradnja",
     "Strategija naše firme ogleda se u korektnom dogovaranju i projektovanju realne strategije za izvođenje projekata",
     "Radove izvodimo samo sa visokokvalitetnim građevinskim materijalima. Takođe posedujemo svu potrebu mehanizaciju i prateću pomoćnu opremu za realizaciju različitih projekata. Jovanović gradnja je siguran realizator dogovorenih građevinskih projekata. "
   ),
