@@ -532,47 +532,6 @@ h3 {
   .why {
     width: 90%;
   }
-}
-
-@media only screen and (max-width: 600px) {
-  .iconabsolute {
-    font-size: 80px;
-    color: rgb(23, 54, 23);
-    position: absolute;
-    top: 35%;
-  }
-  .firstimage {
-    margin-top: 0px;
-    height: 450px;
-  }
-  .divforpictures h1 {
-    font-size: 30px;
-    top: 20%;
-  }
-  .whydiv {
-    font-size: 12px;
-  }
-  .aboutdiv h3 {
-    font-size: 22px;
-  }
-
-  .dalibor {
-    width: 300px;
-  }
-  .serves {
-    padding-top: 20px;
-    width: 100%;
-  }
-  .iconcontact {
-    background-size: contain;
-  }
-  .margin {
-    padding-top: 30px;
-  }
-  .firstdiv {
-    width: 70%;
-    font-size: medium;
-  }
   .contact2 {
     display: none;
   }
@@ -588,9 +547,6 @@ h3 {
     display: flex;
     margin-bottom: 10px;
   }
-  .firstpage {
-    background-size: contain;
-  }
   .navlinks,
   .buttonnav {
     font-size: medium;
@@ -599,6 +555,56 @@ h3 {
   .imgcontainer {
     display: none;
   }
+  .firstimage {
+    margin-top: 0px;
+    height: 450px;
+  }
+  .margin {
+    padding-top: 30px;
+  }
+  .serves {
+    padding-top: 20px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .iconabsolute {
+    font-size: 80px;
+    color: rgb(23, 54, 23);
+    position: absolute;
+    top: 35%;
+  }
+
+  .divforpictures h1 {
+    font-size: 30px;
+    top: 15rem;
+  }
+  .whydiv {
+    font-size: 12px;
+  }
+  .aboutdiv h3 {
+    font-size: 22px;
+  }
+
+  .dalibor {
+    width: 300px;
+  }
+
+  .iconcontact {
+    background-size: contain;
+  }
+  
+  .firstdiv {
+    width: 70%;
+    font-size: medium;
+  }
+ 
+
+  .firstpage {
+    background-size: contain;
+  }
+
   .firstpageimagecontainer {
     display: none;
   }
@@ -692,7 +698,7 @@ h3 {
   }
   .divforpictures h1 {
     font-size: 20px;
-    top: 25%;
+    top: 13rem;
   }
   .dalibor {
     width: 250px;

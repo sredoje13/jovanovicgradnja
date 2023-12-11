@@ -5,7 +5,7 @@ const mainstore=
 createSlice({
     name:'mainstore',
     initialState:{scrolllayout:false,imgindex:null,
-       serverindex:0,contactop:0,windowwidth:0,servecetop:0},
+       serverindex:0,contactop:0,windowwidth:0,servecetop:0,openmenu:false},
     reducers:{
      onscroll(state,action){
       state.scrolllayout=true
@@ -31,6 +31,13 @@ state.windowwidth=action.payload
  setservecetop(state,action){
   state.servecetop=action.payload
 },
+openmenu(state,action){
+  state.openmenu=!state.openmenu
+},
+closemenu(state,action){
+  state.openmenu=false
+}
+
     }
 })
 

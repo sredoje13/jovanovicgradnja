@@ -15,11 +15,10 @@ import Openpage from "./components/firstpage/Openpage";
 function App() {
   const [viewpage, setviewpage] = useState(false);
   const contactop = useSelector((state) => state.mainstore.contactop);
-  const [openmenu, setopenmenu] = useState(false);
-  const openitmenu = () => {
-    setopenmenu(!openmenu);
-  };
   const dispatch = useDispatch();
+  const openmenu=useSelector((state)=>state.mainstore.openmenu)
+  const openitmenu = () => {
+dispatch(actions.openmenu())  };
   useEffect(() => {
     dispatch(actions.setwidth(window.innerWidth));
   }, [dispatch]);
@@ -34,8 +33,6 @@ function App() {
   };
 
   var onresize = function () {
-    //your code here
-    //this is just an example
     const width = window.innerWidth;
     dispatch(actions.setwidth(width));
   };
@@ -55,7 +52,7 @@ function App() {
           />
           <Switch>
             <Route path="/" exact>
-              {/*  <Redirect to='/Početna'/> */}
+                <Redirect to='/Početna'/> 
             </Route>
             <Route path="/Početna">
               <Firstpage viewicon={openmenu} />

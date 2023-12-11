@@ -21,6 +21,7 @@ function Layout(props) {
 
   const scrollontop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    dispatch(actions.closemenu())
   };
   useEffect(() => {
     window.addEventListener("scroll", handlescroll);
