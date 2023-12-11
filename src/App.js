@@ -29,7 +29,7 @@ dispatch(actions.openmenu())  };
   });
   console.log(viewpage);
   const scrolltocontact = () => {
-    window.scrollTo({ top: contactop.offsetTop + 400 });
+    window.scrollTo({ top: contactop.offsetTop + 400,behavior:'smooth' });
     dispatch(actions.closemenu())
   };
 
