@@ -1,64 +1,78 @@
-import './App.css';
-import { Route,Switch } from 'react-router-dom';
-import Firstpage from './components/firstpage/Firstpage';
-import Layout from './components/Layout/Layout';
-import COntact2 from './components/Contact/COntact2'
-import Contact from './components/Contact/Contact';
-import Servespage from './components/Serveces/Servespage'
-import COpyright from './components/Contact/COpyright';
-import Aboutus from './components/Aboutus/Aboutus';
-import { actions } from './components/redux/reduxstore';
-import { useDispatch,useSelector } from 'react-redux';
-import { useEffect,useState } from 'react';
-import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
+import "./App.css";
+import { Route, Switch } from "react-router-dom";
+import Firstpage from "./components/firstpage/Firstpage";
+import Layout from "./components/Layout/Layout";
+import COntact2 from "./components/Contact/COntact2";
+import Contact from "./components/Contact/Contact";
+import Servespage from "./components/Serveces/Servespage";
+import COpyright from "./components/Contact/COpyright";
+import Aboutus from "./components/Aboutus/Aboutus";
+import { actions } from "./components/redux/reduxstore";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import Openpage from "./components/firstpage/Openpage";
 function App() {
-  const contactop=useSelector((state)=>state.mainstore.contactop)
-  const [openmenu,setopenmenu]=useState(false)
-const openitmenu=()=>{
-  setopenmenu(!openmenu)
-}
-  const dispatch=useDispatch()
-useEffect(()=>{
- dispatch(actions.setwidth(window.innerWidth))
-},[dispatch])
+  const [viewpage, setviewpage] = useState(false);
+  const contactop = useSelector((state) => state.mainstore.contactop);
+  const [openmenu, setopenmenu] = useState(false);
+  const openitmenu = () => {
+    setopenmenu(!openmenu);
+  };
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(actions.setwidth(window.innerWidth));
+  }, [dispatch]);
+  useEffect(() => {
+    setTimeout(() => {
+      setviewpage(true);
+    }, 3000);
+  });
+  console.log(viewpage);
+  const scrolltocontact = () => {
+    window.scrollTo({ top: contactop.offsetTop + 400 });
+  };
 
-const scrolltocontact=()=>{
- window.scrollTo({top:contactop.offsetTop+400}) 
-}
-
-  var onresize = function() {
+  var onresize = function () {
     //your code here
     //this is just an example
-    const width = window.innerWidth
-   dispatch(actions.setwidth(width))
- }
- window.addEventListener("resize", onresize);
-  return (
-    <div className='App' > 
-      <COntact2/>
-    <Layout openmenu={openmenu}
-    openit={openitmenu}
-     scrolltocontact={scrolltocontact}/>
-       <Switch>
-       <Route path='/' exact>
-        <Redirect to='/Početna'/>
-       </Route>
-  <Route path="/Početna" >
-    <Firstpage viewicon={openmenu}/>
-  </Route>
-  <Route path="/Usluge">
-    <Servespage/>
-  </Route>
-  <Route path="/O nama">
-    <Aboutus/>
-  </Route>
+    const width = window.innerWidth;
+    dispatch(actions.setwidth(width));
+  };
+  window.addEventListener("resize", onresize);
 
- </Switch>
- <Contact scrolltocontact={scrolltocontact}/>
- <COpyright/>
-    </div>
-
-  );
+  if (!viewpage) {
+    return <Openpage />;
+  } else {
+    return (
+      <div>
+        <div className="App">
+          <COntact2 />
+          <Layout
+            openmenu={openmenu}
+            openit={openitmenu}
+            scrolltocontact={scrolltocontact}
+          />
+          <Switch>
+            <Route path="/" exact>
+              {/*  <Redirect to='/Početna'/> */}
+            </Route>
+            <Route path="/Početna">
+              <Firstpage viewicon={openmenu} />
+            </Route>
+            <Route path="/Usluge">
+              <Servespage />
+            </Route>
+            <Route path="/O nama">
+              <Aboutus />
+            </Route>
+          </Switch>
+          <Contact scrolltocontact={scrolltocontact} />
+          <COpyright />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
